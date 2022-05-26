@@ -1,0 +1,268 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@font-face {
+  font-family: plainPensle;
+  src: url(PlainPensle.ttf);
+}
+
+@layer base {
+  h1 {
+    @apply mb-6 text-3xl font-semibold;
+    font-family: 'Marcellus', serif;
+  }
+  h2 {
+    @apply text-2xl font-semibold;
+    font-family: 'Marcellus', serif;
+  }
+  p {
+    @apply mb-4;
+    font-family: 'Marcellus', serif;
+    /* font-family: minion-pro, serif */
+  }
+  a {
+    font-family: 'Marcellus', serif;
+    @apply text-green-500 hover:text-green-400 dark:text-green-400 dark:hover:text-green-300;
+  }
+  body{
+    font-family: 'Marcellus', serif;
+    /* background-color: #eee; */
+  }
+}
+
+figcaption{
+  display: flex;
+  justify-content: center;
+  margin-top: calc(-1.25rem + 10px);
+  color: #666666;
+  font-family: sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+blockquote{
+  border-left-color: #10b981 !important;
+}
+
+/* Post styles */
+.prose pre {
+  @apply bg-gray-50 border border-gray-200 dark:border-gray-700 dark:bg-gray-900;
+}
+
+iframe{
+  width: 100%;
+}
+
+.outer{
+  display: flex;
+  justify-content: space-between;
+  min-height: 70vh;
+  /* background-color: #F9F8F4; */
+}
+
+.left{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 150%;
+  padding-right: 50px;
+}
+.right{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5% 0;
+  justify-content: center;
+  align-self: center;
+  border: 5px solid #10b981;
+  border-radius: 3%;
+}
+
+.big{
+  font-size: 4rem;
+  line-height: 4rem;
+}
+
+.blog-row{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.prose code {
+  @apply text-gray-800 dark:text-gray-200 px-1 py-0.5 border border-gray-100 dark:border-gray-800 rounded-md bg-gray-100 dark:bg-gray-900;
+}
+
+.prose{
+  display: block;
+  margin: auto;
+}
+
+.prose img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.prose a {
+  @apply text-green-500 hover:text-green-400 dark:text-green-400 dark:hover:text-green-300;
+  text-decoration: none;
+}
+
+/* Prism Styles */
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  @apply text-gray-700 dark:text-gray-300;
+}
+
+.token.punctuation {
+  @apply text-gray-700 dark:text-gray-300;
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol,
+.token.deleted {
+  @apply text-green-500;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+  @apply text-purple-500;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+  @apply text-yellow-500;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+  @apply text-blue-500;
+}
+
+.token.function,
+.token.class-name {
+  @apply text-pink-500;
+}
+
+.token.regex,
+.token.important,
+.token.variable {
+  @apply text-yellow-500;
+}
+
+code[class*='language-'],
+pre[class*='language-'] {
+  @apply text-gray-800 dark:text-gray-50;
+}
+
+pre::-webkit-scrollbar {
+  display: none;
+}
+
+pre {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+/* Remark Styles */
+.remark-code-title {
+  @apply text-gray-800 dark:text-gray-200 px-5 py-3 border border-b-0 border-gray-200 dark:border-gray-700 rounded-t bg-gray-200 dark:bg-gray-800 text-sm font-mono font-bold;
+}
+
+.remark-code-title + pre {
+  @apply mt-0 rounded-t-none;
+}
+
+.mdx-marker {
+  @apply block -mx-4 px-4 bg-gray-100 dark:bg-gray-800 border-l-4 border-blue-500;
+}
+
+span{
+  white-space: nowrap;
+}
+
+.about{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-right: 50px;
+  width: 50%;
+}
+
+.magritte{
+display: flex;
+justify-content: center;
+align-items: center;
+position: relative;
+min-height: 400px;
+width: 50%;
+}
+
+#big{
+  display: block;
+  position: absolute;
+  z-index: 0;
+  max-height: 25em;
+}
+
+#small{
+  font-size: 13em;
+  z-index: 5;
+  position: absolute;
+  align-items: center;
+  justify-self: center;
+  bottom: 25%;
+  cursor: pointer;
+}
+
+.emoji-list li{
+  font-size: 300px;
+}
+
+.italics{
+  font-family: plainPensle;
+  text-align: center;
+}
+
+@media screen and (max-width: 992px) {
+  .w-4\/12{
+    width: 100%;
+  }
+  .outer{
+    flex-direction: column;
+  }
+  .left, .magritte, .about{
+    width: 100%;
+    padding: 0;
+  }
+  .magritte{
+   margin: 20px 0px !important;
+  }
+}
+
+@media screen and (max-width: 460px) {
+  #big{
+    max-height: 300px;
+  }
+  #small{
+    font-size: 140px;
+    bottom: 30%;
+  }
+}
