@@ -32,9 +32,9 @@ export const Index = ({ posts }: IndexProps): JSX.Element => {
 
       <div className="outer blog-row">
         {posts.map((post) => (
-          <article key={post.slug} className="mt-12 w-4/12 px-1">
+          <article key={post.slug} className="mt-12 w-4/12 px-4">
             <p className="mb-1 text-sm text-gray-500 dark:text-gray-400">
-              {format(parseISO(post.date), 'MMMM dd, yyyy')}
+              {format(parseISO(post.date), 'MMMM d, yyyy')}
             </p>
             <h1 className="mb-2 text-xl">
               <Link as={`/posts/${post.slug}`} href={`/posts/[slug]`}>

@@ -32,6 +32,7 @@ type PostPageProps = {
   frontMatter: PostType;
 };
 
+
 const PostPage = ({ source, frontMatter }: PostPageProps): JSX.Element => {
   const customMeta: MetaProps = {
     title: `${frontMatter.title} - Ioav Livneh`,
@@ -40,14 +41,19 @@ const PostPage = ({ source, frontMatter }: PostPageProps): JSX.Element => {
     date: frontMatter.date,
     type: 'article',
   };
+
+  var hasSubtitle = frontMatter.title.includes(',')
+  var subtitle= frontMatter.title.split(',');
+
   return (
     <Layout customMeta={customMeta}>
       <article>
-        <h1 className="mb-3 text-gray-900 dark:text-white">
-          {frontMatter.title}
+        <h1 className="heading mb-3 text-gray-900 dark:text-white">
+          {!hasSubtitle && frontMatter.title}
+          {hasSubtitle && subtitle[0]} {hasSubtitle && <br />} {hasSubtitle && subtitle[1]}
         </h1>
-        <p className="mb-10 text-sm text-gray-500 dark:text-gray-400">
-          {format(parseISO(frontMatter.date), 'MMMM dd, yyyy')}
+        <p className="heading mb-10 text-sm text-gray-500 dark:text-gray-400">
+          {format(parseISO(frontMatter.date), 'MMMM d, yyyy')}
         </p>
         <div className="prose dark:prose-dark">
           <MDXRemote {...source} components={components} />

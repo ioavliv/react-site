@@ -28,6 +28,10 @@
     font-family: 'Marcellus', serif;
     /* background-color: #eee; */
   }
+  ::selection {
+    /* color: white; */
+    background: rgba(16, 185, 129, 0.4);
+  }
 }
 
 figcaption{
@@ -50,12 +54,13 @@ blockquote{
 }
 
 iframe{
-  width: 100%;
+  max-width: 100%;
+  margin: auto;
 }
 
 .outer{
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   min-height: 70vh;
   /* background-color: #F9F8F4; */
 }
@@ -75,7 +80,7 @@ iframe{
   padding: 5% 0;
   justify-content: center;
   align-self: center;
-  border: 5px solid #10b981;
+  border: 5px solid rgba(16, 185, 129, 0.4);
   border-radius: 3%;
 }
 
@@ -96,6 +101,12 @@ iframe{
 .prose{
   display: block;
   margin: auto;
+  margin-bottom: 3em;
+}
+
+.heading{
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .prose img {
@@ -237,8 +248,27 @@ width: 50%;
 }
 
 .italics{
+  white-space: nowrap;
   font-family: plainPensle;
   text-align: center;
+}
+
+footer{
+  background: rgba(16, 185, 129, 0.4);
+  /* background-color: #10b981; */
+}
+
+/* h2 a{
+  display: block; 
+  position: relative; 
+  top: 250px; 
+  visibility: hidden;
+} */
+
+@media only screen and (min-width: 992px) {
+.prose, .heading{
+  width: 70%;
+}
 }
 
 @media screen and (max-width: 992px) {
@@ -264,5 +294,10 @@ width: 50%;
   #small{
     font-size: 140px;
     bottom: 30%;
+  }
+  .italics{
+    font-size: 8vw;
+    font-family: plainPensle;
+    text-align: center;
   }
 }
