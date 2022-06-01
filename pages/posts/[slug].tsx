@@ -24,7 +24,7 @@ import { postFilePaths, POSTS_PATH } from '../../utils/mdxUtils';
 const components = {
   Head,
   Image,
-  Link,
+  Link
 };
 
 type PostPageProps = {
