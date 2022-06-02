@@ -266,6 +266,9 @@ footer{
 }
 
 @media screen and (max-width: 992px) {
+  h2 {
+    scroll-margin-top: 1rem !important;
+  }
   .w-4\/12{
     width: 100%;
   }
@@ -282,6 +285,9 @@ footer{
 }
 
 @media screen and (max-width: 460px) {
+  h2 {
+    scroll-margin-top: 1rem !important;
+  }
   #big{
     max-height: 300px;
   }
