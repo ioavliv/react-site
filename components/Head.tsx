@@ -10,10 +10,12 @@ const Head = ({ customMeta }: { customMeta?: MetaProps }): JSX.Element => {
   const meta: MetaProps = {
     title: 'Ioav Livneh',
     description: "Ceci n'est pas Ioav. This is not Ioav. This is a website made by Ioav Livneh where he shares useful or interesting ideas for anyone to read and hopefully enjoy.",
-    image: `${WEBSITE_HOST_URL}/images/avatar.png`,
+    image: `${WEBSITE_HOST_URL}/images/avatar.png`, 
     type: 'website',
     ...customMeta,
   };
+
+  // make this image above a gif
 
   return (
     <NextHead>

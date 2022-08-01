@@ -218,6 +218,11 @@ span{
   width: 50%;
 }
 
+svg{
+  margin-right: 10px;
+  display: inline;
+}
+
 .magritte{
 display: flex;
 justify-content: center;
