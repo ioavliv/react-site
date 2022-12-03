@@ -32,7 +32,7 @@ export const Index = ({ posts }: IndexProps): JSX.Element => {
 
       <div className="outer blog-row">
         {posts.map((post) => (
-          <article key={post.slug} className="mt-12 w-4/12 px-4">
+          <article key={post.slug} className="mt-12 w-4/12 px-4 bg-sky-500">
             <p className="mb-1 text-sm text-gray-500 dark:text-gray-400">
               {format(parseISO(post.date), 'MMMM d, yyyy')}
             </p>
